@@ -48,6 +48,7 @@ The config file template should support all current configuration options. If we
 * `redis.config.pidfile` - When daemonize is enabled this configures where Redis will write the pid file.
 * `redis.config.rdbcompression` - Whether or not to use LZF compression when dumping .rdb databases. [ yes, no ]
 * `redis.config.timeout` - Configures when Redis will timeout a idle client connection.
+* `redis.config.requirepass` - Required password. Defaults to none.
 
 ** The following configuration settings are only available in redis >= 2.1.12 -- http://redis.io/commands/slowlog **
 

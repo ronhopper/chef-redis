@@ -28,6 +28,7 @@ attribute :activerehashing,:kind_of => [TrueClass, FalseClass], :default => true
 attribute :slaveof,        :kind_of => String, :default => nil
 attribute :slaveof_ip,     :kind_of => String, :default => nil
 attribute :slaveof_port,   :kind_of => Integer, :default => nil
+attribute :requirepass,    :kind_of => String, :default => nil
 
 ###
 ## the following configuration settings may only work with a recent redis release
@@ -82,7 +83,8 @@ state_attrs(
  :save,
  :activerehashing,
  :slaveof,
-            
+ :requirepass,
+
  :slowlog_log_slower_than,
  :slowlog_max_len,
 
