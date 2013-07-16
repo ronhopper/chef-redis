@@ -95,7 +95,7 @@ def create_config
     owner "root"
     group "root"
     mode 00644
-    variables :config => new_resource.state
+    variables :config => new_resource.state, :resource => new_resource
     case new_resource.init_style
     when "init"
       notifies :restart, "service[#{redis_service_name}]"

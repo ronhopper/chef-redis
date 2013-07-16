@@ -1,4 +1,6 @@
 <% @config.each do |key, value| -%>
   <% next if value.nil? -%>
+  <% config_attr = :"configure_#{key}" %>
+  <% next if @resource.respond_to?(config_attr) and not @resource.public_send(config_attr) -%>
 <%= ChefRedis.template_format(key, value) %>
 <% end %>
