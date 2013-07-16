@@ -40,6 +40,7 @@ The config file template should support all current configuration options. If we
 * `redis.config.databases` - Set the number of Redis databases.
 * `redis.config.dbfilename` - The filename where the database is dumped.
 * `redis.config.dir` - The directory where Redis will store its DB and AOF files.
+* `redis.config.configure_bind` - Adds or removes bind from your redis.conf [ true, nil ]
 * `redis.config.bind` - Address to listen on. Defaults to localhost.
 * `redis.config.port` - Port to listen on.
 * `redis.config.logfile` - The Redis logfile.
